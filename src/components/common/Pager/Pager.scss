@@ -1,0 +1,25 @@
+.pager_item {
+    display: inline-block;
+    min-width: 24px;
+    text-align: center;
+    color: #1890ff;
+    border: 1px solid #c2c2c2;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px;
+    cursor: pointer;
+    &.disabled {
+        color: #c2c2c2;
+        cursor: not-allowed;
+    }
+    &.active {
+        border-color: transparent;
+        color: #f40;
+        cursor: auto;
+    }
+}
+.pager_current,
+.pager_total {
+    margin: 2px;
+    padding: 5px;
+}
