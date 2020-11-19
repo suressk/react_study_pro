@@ -1,0 +1,109 @@
+
+.header {
+    text-align: center;
+    .top-menu {
+        display: flex;
+        padding: 10px 0;
+        .back {
+            width: 2rem;
+        }
+        .feedback {
+            width: 3rem;
+            color: rgb(107, 216, 228);
+        }
+        .rest-title {
+            margin: 0 auto;
+            font-size: 1.1rem;
+            .title {
+                font-weight: 700;
+                margin-left: 5px;
+            }
+            .iconfont {
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .rest-state {
+        color: #fff;
+        .state {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(to bottom, rgb(105, 115, 128), rgb(147, 155, 167));
+            padding: 5px 0 10px;
+            .approve {
+                margin: 5px 0;
+                letter-spacing: 3px;
+                .iconfont {
+                    padding-right: 5px;
+                }
+            }
+            .is-completed {
+                font-size: 2rem;
+                letter-spacing: 5px;
+            }
+        }
+        .progress {
+            height: 20px;
+            font-size: 0.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                width: 300%;
+                height: 100%;
+                background: repeating-linear-gradient(-45deg, rgb(147, 155, 167), rgb(147, 155, 167) 20px, #fff 0, #fff 40px);
+                animation: scrollMove 6s linear -1s infinite;
+            }
+            .current-date {
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 0 10px;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+@keyframes scrollMove {
+    0% {
+        transform: translateX(25%);
+    }
+    100% {
+        transform: translateX(-25%);
+    }
+}
+
+.pre-rest {
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px 1rem;
+    font-size: 12px;
+    letter-spacing: 1px;
+    & > div {
+        padding: 3px 0;
+    }
+    .title {
+        color: #78798a;
+    }
+    .des {
+        color: #565758;
+        margin-right: 5px;
+    }
+    .notice {
+        color: rgb(240, 159, 56);
+    }
+    .see-detail {
+        color: rgb(79, 150, 247);
+        margin-left: 2px;
+    }
+    .real-interval {
+        display: flex;
+        .title {
+            flex-shrink: 0;
+        }
+    }
+}
