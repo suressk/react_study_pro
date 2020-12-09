@@ -23,31 +23,28 @@ import ReactDOM from 'react-dom';
 //     document.getElementById('root')
 // );
 
-<<<<<<< HEAD
-// ===============
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import "./react-router/matchPath";
+//
+// function Comp() {
+//     return <h1>Comp component</h1>
+// }
+//
+// function NotFound() {
+//     return <h1>NotFound</h1>
+// }
+//
+// ReactDOM.render(
+//     <React.StrictMode>
+//       <Router>
+//         <Switch>
+//           <Route path="/comp" exact component={Comp} />
+//           <Route component={NotFound} />
+//         </Switch>
+//       </Router>
+//     </React.StrictMode>,
+//     document.getElementById('root')
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import "./react-router/matchPath";
-
-function Comp() {
-    return <h1>Comp component</h1>
-}
-
-function NotFound() {
-    return <h1>NotFound</h1>
-}
-
-ReactDOM.render(
-    <React.StrictMode>
-      <Router>
-        <Switch>
-          <Route path="/comp" exact component={Comp} />
-          <Route component={NotFound} />
-        </Switch>
-      </Router>
-    </React.StrictMode>,
-    document.getElementById('root')
-=======
 import "./react-router/matchPath";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom"
 
@@ -63,5 +60,4 @@ ReactDOM.render(
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
->>>>>>> 89971676d7705ea825267761e12a14ea6a6d5136
 );
