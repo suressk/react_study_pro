@@ -23,6 +23,7 @@ import ReactDOM from 'react-dom';
 //     document.getElementById('root')
 // );
 
+<<<<<<< HEAD
 // ===============
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -46,4 +47,21 @@ ReactDOM.render(
       </Router>
     </React.StrictMode>,
     document.getElementById('root')
+=======
+import "./react-router/matchPath";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom"
+
+function News() {
+  return <h1>News</h1>
+}
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Router>
+      <NavLink to="/news/user/5">News</NavLink>
+      <Route path="/news/:id/:page" component={News} />
+    </Router>
+  </React.StrictMode>,
+  document.getElementById('root')
+>>>>>>> 89971676d7705ea825267761e12a14ea6a6d5136
 );
