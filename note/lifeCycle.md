@@ -36,13 +36,13 @@
 
     - componentWillReceiveProps(newProps)
         newProps => 新的属性值（属性重新赋值也会执行，即使值并没有改变）
-    
+
     - **shouldComponentUpdate(newProps, newState)** - 必须返回 boolean 值
         指示 React 组件是否应该更新
         返回 true 则会调用 render 重新渲染
         返回 false 则不会调用 render 重新渲染
         所以，这是一个 **性能优化点**
-    
+
     - componentWillUpdate(newProps, newState)
         组件即将重新渲染（render 之前）
 
@@ -51,7 +51,7 @@
     - componentDidUpdate(oldProps, oldState)
         组件已经完成重新渲染
         一般在此函数中操作 dom
-    
+
     销毁阶段 ========================== ：
 
     - **componentWillUnmount**
@@ -97,11 +97,9 @@
     - componentDidUpdate(oldProps, oldState)
         组件已经完成重新渲染
         一般在此函数中操作 dom
-    
+
     销毁阶段 ========================== ：
 
     - **componentWillUnmount**
         组件被销毁 - 从虚拟 DOM 树种移除
         通常用来销毁组件依赖的资源（如：计时器等）
-
-

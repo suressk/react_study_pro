@@ -93,7 +93,6 @@ export default class App extends Component {
                 <Progress active bg="#008c8c" />
                 <br/>
                 <br/>
-                
             </div>
         )
     }
