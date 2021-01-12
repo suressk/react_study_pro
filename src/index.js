@@ -48,6 +48,10 @@ import ReactDOM from 'react-dom';
 import "./react-router/matchPath";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom"
 
+import { v4 as uuid }  from "uuid";
+
+console.log(uuid());
+
 function News() {
   return <h1>News</h1>
 }
