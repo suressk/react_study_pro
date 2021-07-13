@@ -30,9 +30,10 @@ export function getLinearGradientBg(colors, percent, width = 100, height = 1) {
     // 所有像素颜色值
     const imageData = ctx.getImageData(0, 0, width, height).data;
     const len = imageData.length;
-    let res = [];
+    const res = [];
     for (let i = 0; i < len; i += 4) {
-        res.push( `rgba(${imageData[i]}, ${imageData[i + 1]}, ${imageData[i + 2]}, ${imageData[i + 3]})` );
+        const [r, g, b, a] = [imageData[i], imageData[i + 1], imageData[i + 2], imageData[i + 3]]
+        res.push(`rgba(${r}, ${g}, ${b}, ${a})`);
     }
     const resLen = res.length;
     if (percent <= 0) {
@@ -40,7 +41,6 @@ export function getLinearGradientBg(colors, percent, width = 100, height = 1) {
     } else if (percent >= 1) {
         return res[resLen - 1];
     } else {
-        const index = Math.round(resLen * percent);
-        return res[index];
+        return res[Math.round(resLen * percent)];
     }
 }
